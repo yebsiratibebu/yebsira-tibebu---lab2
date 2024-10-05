@@ -1,7 +1,8 @@
 import java.util.*;
+
 public class ThingList {
 
-  private static class Node {
+  private class Node {
     public Thing data;
     public Node  next;
   
@@ -14,19 +15,18 @@ private Node head;
  public ThingList () {
   this.head = null;
  }
-public void add (Thing thing) {
+public void addThing (Thing thing) {
   Node New = new Node (thing);
 
   if (head == null) {
     head = New;
     head.next = null;
-    {
+  }
       New.next = head;
       head = New;
     }
-  }
-}
-  public void PRINTALL() {
+  
+  public void printAll () {
  
     for( Node T = head; T != null; T = T.next ) {
         System.out.println(T.data.row + " " + T.data.col + " " + T.data.lab);

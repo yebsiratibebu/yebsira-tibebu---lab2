@@ -1,15 +1,16 @@
 import java.util.*;
     
     public abstract class Thing {
-    public int  row, col, dir, timeSinceLast;
-    public char lab = 'r';
-    public boolean isTypeB;
+      protected int row;
+      protected int col; 
+      protected int dir; 
+      protected char lab;
 
     public Thing (int row, int col, char lab) {
       this.row = row;
       this.col = col;
       this.dir = 0;
-
+      this.lab = lab;
     }
     
       public void rightTurn() {
