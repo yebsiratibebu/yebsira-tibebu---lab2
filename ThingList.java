@@ -11,10 +11,8 @@ public class ThingList {
     this.next = null;
   }
 }
-private Node head;
- public ThingList () {
-  this.head = null;
- }
+  Node head = null;
+
 public void addThing (Thing thing) {
   Node New = new Node (thing);
 
@@ -27,16 +25,16 @@ public void addThing (Thing thing) {
     }
   
   public void printAll () {
- 
     for( Node T = head; T != null; T = T.next ) {
         System.out.println(T.data.row + " " + T.data.col + " " + T.data.lab);
-}
-}
-public void moveAll (Random rand) {
-  for( Node T = head; T != null; T = T.next ) {
-    head.data.maybeTurn(rand);
-    head.data.step();
+    }
   }
-}
+
+  public void moveAll (Random rand) {
+    for( Node T = head; T != null; T = T.next ) {
+    T.data.maybeTurn(rand);
+    T.data.step();
+    }
+  }
 }
 

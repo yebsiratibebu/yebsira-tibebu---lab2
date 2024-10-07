@@ -11,7 +11,7 @@ public class DotChaser {
    *
    * A STATIC CLASS? OH NO! GET IT OUT OF HERE!
    */
-  public static class Thing {
+/* */ public static class Thing {
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
     public int  row, col, dir, timeSinceLast;
@@ -115,6 +115,16 @@ public class DotChaser {
         nB.data = tB;
         nB.next = L;
         L       = nB;
+
+        Thing tC = new Thing();
+        tC.row     = 65;
+        tC.col     = 50;
+        tC.lab     = 'y';
+        tC.isTypeB = true;
+        Node nC = new Node();
+        nC.data = tC;
+        nC.next = L;
+        L       = nC;
       }
 
       // Print out each thing.
@@ -128,6 +138,7 @@ public class DotChaser {
 
       // Move each thing.
       // (SEEMS LIKE A NICE MOVEALL() METHOD CALL WOULD WORK HERE)
+
       for( Node T = L; T != null; T = T.next ) {
         maybeTurn(T.data);
         step(T.data);

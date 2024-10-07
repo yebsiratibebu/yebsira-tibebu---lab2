@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class TypeC extends Thing {
 
     public TypeC (int row, int col, char lab) {
@@ -9,9 +8,10 @@ public class TypeC extends Thing {
         int i = rand.nextInt(4);
         if (i == 1) {
             this.rightTurn();
-        }
-        if (i == 2) {
+
+        if (i == 2 )
             this.leftTurn();
         }
     }
 }
+

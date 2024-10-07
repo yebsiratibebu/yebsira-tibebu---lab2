@@ -1,3 +1,4 @@
+
 import java.util.*;
     
     public abstract class Thing {
@@ -20,6 +21,7 @@ import java.util.*;
         this.dir = (this.dir + 3) % 4;
       }
       public abstract void maybeTurn(Random rand);
+      
 
       public void step() {
         final int[] dc = {0, 1, 0, -1}, dr = {1, 0, -1, 0};
